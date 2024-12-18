@@ -1,0 +1,177 @@
+%button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 36px;
+  border: 1px solid rgb(162, 101, 57);
+  border-radius: 24px;
+  background: transparent;
+  color: rgb(162, 101, 57);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  transition: all 0.2s;
+
+  &:hover {
+    background: rgb(162, 101, 57);
+    color: rgb(255, 255, 255);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat Alternates', Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+a {
+  text-decoration: none;
+  color: rgb(69, 64, 61);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  transition: all 0.2s;
+}
+
+li {
+  list-style: none;
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  color: rgb(69, 64, 61);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 39px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: rgb(69, 64, 61);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+}
+
+h3 {
+  color: rgb(69, 64, 61);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+p {
+  color: rgb(69, 64, 61);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.header {
+  background: rgb(255, 255, 255);
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+  nav {
+    display: flex;
+
+    ul {
+      display: flex;
+      column-gap: 48px;
+      margin-right: 48px;
+      align-items: center;
+    }
+  }
+
+  .button {
+    @extend %button;
+  }
+}
+
+.top {
+  padding-top: 120px;
+  padding-bottom: 210px;
+  background: rgb(246, 245, 244);
+  background-image: url(./img/top-tray.png);
+  background-repeat: no-repeat;
+  background-position: 100% 120px;
+  position: relative;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    margin-top: 120px;
+    max-width: 532px;
+    z-index: 2;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  &__button {
+    margin-top: 16px;
+    @extend %button;
+    width: 366px;
+  }
+
+  img {
+    position: absolute;
+    transition: all 0.2s;
+  }
+
+  .coffee {
+    top: 88.45px;
+    right: 245px;
+
+    &:hover {
+      transform: rotate(-10.44deg);
+    }
+  }
+
+  .beans {
+    top: 178.85px;
+    right: 101.47px;
+  }
+
+  .cookie {
+    top: 488.57px;
+    right: 385.11px;
+
+    &:hover {
+      transform: rotate(-18.37deg);
+    }
+  }
+
+  .cinnabon {
+    top: 320.9px;
+    right: -57.7px;
+
+    &:hover {
+      transform: rotate(-16.36deg);
+    }
+  }
+}
